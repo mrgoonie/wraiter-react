@@ -1,7 +1,9 @@
 import "remixicon/fonts/remixicon.css";
 
-const Wraiter = () => {
-  return <div>Wraiter</div>;
+import { BaseProps } from "./types/BaseProps";
+
+const Wraiter = (props?: BaseProps) => {
+	return <div>Wraiter</div>;
 };
 
 export default Wraiter;
