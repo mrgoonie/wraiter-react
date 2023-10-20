@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "bunx --bun vite",
     "build": "bunx --bun vite build",
-    "build:pkg": "bun build src/wraiter/index.tsx --outdir package && bun run build:declaration",
+    "build:pkg": "bun build src/wraiter/index.tsx --outdir package/ && bun run build:declaration",
     "build:declaration": "tsc -p tsconfig.build.json",
     "lint": "eslint ./src --ext ts,tsx --fix",
     "clean": "rimraf .yarn/cache node_modules yarn.lock pnpm-lock.yaml dist",
