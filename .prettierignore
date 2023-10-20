@@ -1,0 +1,20 @@
+# Ignore artifacts:
+build
+coverage
+out
+dist
+
+.next
+node_modules
+.yarn
+.out
+.turbo
+.temp
+.hustky
+.github
+
+public
+package.json
+
+docker-compose*.yaml
+docker-compose*.yml
