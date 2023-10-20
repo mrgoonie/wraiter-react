@@ -1,0 +1,92 @@
+@tailwind base;
+@layer base {
+	ul,
+	ol {
+		list-style: revert;
+		margin: revert;
+		padding: revert;
+	}
+	/* h1 {
+		@apply text-3xl;
+	}
+	h2 {
+		@apply text-2xl;
+	}
+	h3 {
+		@apply text-xl;
+	}
+	h4 {
+		@apply text-lg;
+	}
+	h5 {
+		@apply text-base;
+	} */
+	a {
+		@apply text-blue-600 underline;
+	}
+}
+
+ul,
+ul li {
+	@apply list-disc;
+}
+ol,
+ol li {
+	@apply list-decimal;
+}
+ul ul,
+ul ul li {
+	list-style-type: circle !important;
+}
+ul ul ul,
+ul ul ul li {
+	list-style-type: square !important;
+}
+
+ol ol,
+ol ol li {
+	list-style-type: upper-roman;
+}
+
+ol ol ol,
+ol ol ol li {
+	list-style-type: lower-alpha;
+}
+
+label {
+	margin-bottom: 0;
+}
+
+.ant-btn-primary {
+	background-color: #1677ff;
+}
+
+.youtube-video {
+	@apply mx-auto;
+}
+
+.editor-icon {
+	@apply px-1 hover:text-slate-500 transition-all;
+
+	&.active {
+		@apply text-sky-600;
+	}
+}
+
+.mark,
+mark {
+	@apply bg-yellow-300 bg-opacity-60 rounded box-decoration-clone;
+}
+
+/* Custom CSS Needed for TipTap PlaceHolder */
+.ProseMirror p.is-editor-empty:first-child::before {
+	color: #adb5bd;
+	content: attr(data-placeholder);
+	float: left;
+	height: 0;
+	pointer-events: none;
+}
+
+.ProseMirror:focus {
+	outline: none;
+}
