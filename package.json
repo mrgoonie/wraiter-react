@@ -147,5 +147,9 @@
   "bugs": {
     "url": "https://github.com/mrgoonie/wraiter-react/issues"
   },
-  "homepage": "https://github.com/mrgoonie/wraiter-react#readme"
+  "homepage": "https://github.com/mrgoonie/wraiter-react#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
