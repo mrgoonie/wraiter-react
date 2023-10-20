@@ -1,0 +1,60 @@
+name: Release All Workflow
+
+# TRIGGERS
+on:
+  push:
+    branches:
+      - main
+      - prerelease
+
+# ENVIRONMENT VARIABLES
+env:
+  GITHUB_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  BRANCH_NAME: ${{ github.head_ref || github.ref }}
+
+# CI/CD STEPS
+jobs:
+  release:
+    name: Release Github & NPM
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show current branch
+        run: echo "${{ env.BRANCH_NAME }}"
+
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.CI_GITHUB_TOKEN }}
+
+      - name: Setup BUN
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install package dependencies
+        run: bun install
+
+      - name: Build package code
+        run: bun run build:package
+
+      - name: Build example site
+        run: bun run build
+
+      - name: Release GITHUB & NPM
+        run: npx semantic-release
+
+      - name: Update "package.json" version
+        run: pnpm pkg-version
+
+      - name: Commit and push latest "package.json" file
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore(package.json): update version [skip ci]"
+          commit_options: "--allow-empty --no-verify --signoff"
+
+      # - uses: actions/upload-artifact@v3
+      #   with:
+      #     name: dist-artifact
+      #     path: dist
