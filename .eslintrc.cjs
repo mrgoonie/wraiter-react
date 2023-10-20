@@ -23,6 +23,7 @@ module.exports = {
 		"tailwindcss/enforces-negative-arbitrary-values": "off",
 		"@typescript-eslint/naming-convention": "off",
 		"@typescript-eslint/no-throw-literal": "off",
+		"@typescript-eslint/no-explicit-any": "off",
 		"unused-imports/no-unused-vars": "off",
 	},
 };
