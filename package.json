@@ -3,6 +3,7 @@
   "private": false,
   "version": "1.0.0",
   "type": "module",
+  "exports": "./package/index.js",
   "files": [
     "package/**",
     "CHANGELOG.md",
@@ -21,6 +22,7 @@
     "pr": "pnpm pull-request",
     "preview": "vite preview",
     "publish": "npm publish --access public",
+    "release": "npx semantic-release --no-ci",
     "pkg-version": "npm pkg set version=$(echo $(git describe --tags $(git rev-list --tags --max-count=1)) | cut -c2-)",
     "prepare": "husky install || true",
     "postinstall": "husky install || true"
