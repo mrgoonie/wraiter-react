@@ -1,3 +1,11 @@
+# [1.0.0-prerelease.2](https://github.com/mrgoonie/wraiter-react/compare/v1.0.0-prerelease.1...v1.0.0-prerelease.2) (2023-10-20)
+
+
+### Bug Fixes
+
+* **package.json:** rm private package ([9ae7aab](https://github.com/mrgoonie/wraiter-react/commit/9ae7aabbe911a48dd098e8ecd0a8f0b4d9ac6d76))
+* **publish config:** public ([bc25981](https://github.com/mrgoonie/wraiter-react/commit/bc25981b53e7e586afaeb873d7585cfb28d26cca))
+
 # 1.0.0-prerelease.1 (2023-10-20)
 
 
