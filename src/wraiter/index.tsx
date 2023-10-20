@@ -1,4 +1,4 @@
-import React from "react";
+import "remixicon/fonts/remixicon.css";
 
 const Wraiter = () => {
 	return <div>Wraiter</div>;

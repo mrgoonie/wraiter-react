@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "remixicon/fonts/remixicon.css";
+import wraiterLogo from "./assets/wraiter.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+	return (
+		<>
+			<main className="max-w-md mx-auto px-0">
+				<h1 className="px-0">
+					<img src={wraiterLogo} className="logo wraiter" alt="Wraiter logo" />
+				</h1>
+				<p>An open source "Notion-like" text editor React Component with AI assistant integrated.</p>
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+				<div className="flex items-center justify-center py-6">
+					<pre className="p-4 rounded-lg bg-neutral-800 text-white">
+						<code>npm i wraiter-react</code>
+					</pre>
+				</div>
+
+				<div className="read-the-docs text-3xl flex gap-4 justify-center">
+					<a href="https://www.npmjs.com/package/@topgroup/wraiter-react" target="_blank">
+						<i className="ri-npmjs-fill"></i>
+					</a>
+					<a href="https://github.com/mrgoonie/wraiter-react" target="_blank">
+						<i className="ri-github-fill"></i>
+					</a>
+				</div>
+			</main>
+		</>
+	);
 }
 
-export default App
+export default App;
