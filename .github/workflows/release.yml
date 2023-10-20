@@ -37,7 +37,7 @@ jobs:
         run: bun install
 
       - name: Build package code
-        run: bun run build:package
+        run: bun run build:pkg
 
       - name: Build example site
         run: bun run build
